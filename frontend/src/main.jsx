@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL;
+
 
 const presets = {
   normal: { amount: 1200, average_amount: 2000, new_beneficiary: false, new_device: false, unusual_location: false, unusual_time: false, daily_transactions: 3 },
